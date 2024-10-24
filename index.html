@@ -1,30 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 
+<script>
+    function minhaFuncao() {
+        alert("Enviando seus dados\n Por favor aguarde");
+    }
+</script>
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário aula de Web!</title>
 </head>
 
-<body>
+<body align="center">
     <h1>Formulário da aula de Fundamentos de Desenvolvimento Web</h1>
     <h2>Preencha os campos requeridos.</h2>
     <form action="index2.html">
-        <table border="10">
+        <table border="10" align="center">
             <tr>
                 <td>
                     Nome completo:
                 </td>
                 <td>
-                    <input name="name" size="30" maxlength="50" required="true">
+                    <input name="name" size="30" maxlength="50" required="true" placeholder="Informe seu nome">
                 </td>
+            </tr>
             <tr>
                 <td>
                     CPF:
                 </td>
                 <td>
-                    <input name="cpf" size="15" maxlength="11" required="true">
+                    <input name="cpf" size="15" maxlength="11" required="true" placeholder="Insira seu CPF">
                 </td>
             </tr>
             <tr>
@@ -32,14 +39,19 @@
                     CEP:
                 </td>
                 <td>
-                    <input name="zip" size="8" maxlength="8" required="true">
+                    <input name="zip" size="11" maxlength="8" required="true" placeholder="Insira seu CEP">
                 </td>
+            </tr>
             <tr>
                 <td>
                     Cidade:
                 </td>
                 <td>
-                    <input name="city" size="20" maxlength="25" required="true">
+                    <select name="city_state" required="true">
+                        <option value="Blumenau" default>Blumenau/SC</option>
+                        <option value="Timbó">Timbó/SC</option>
+                        <option value="Timbó">São Paulo/SP</option>
+                    </select>
                 </td>
             </tr>
             <tr>
@@ -47,19 +59,10 @@
                     Rua:
                 </td>
                 <td>
-                    <input name="street" size="20" maxlength="25" required="true">
+                    <input name="street" size="20" maxlength="25" required="true" placeholder="Informe sua rua">
                 </td>
             </tr>
-            <tr>
-                <td>
-                    Estado:
-                </td>
-                <td>
-                    <input name="state" size="2" maxlength="2" required="true">
-                </td>
-            </tr>
-            </tr>
-            <button>Envie!</button>
+            <button onclick="minhaFuncao()">Enviar Dados</button>
         </table>
     </form>
 
